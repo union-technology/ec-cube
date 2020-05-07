@@ -88,3 +88,6 @@ RUN if [ ! -f ${APACHE_DOCUMENT_ROOT}/var/eccube.db ] && [ ! ${SKIP_INSTALL_SCRI
         ; fi
 
 USER root
+
+RUN pecl install xdebug \
+  && docker-php-ext-enable xdebug
