@@ -91,3 +91,7 @@ USER root
 
 RUN pecl install xdebug \
   && docker-php-ext-enable xdebug
+
+# PHPコードフォーマット
+# VSCodeの拡張機能「php cs fixer」のExcutable Pathに「/root/.composer/vendor/bin/php-cs-fixer」をセットする必要がある。
+RUN composer global require friendsofphp/php-cs-fixer
